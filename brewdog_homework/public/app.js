@@ -37,6 +37,9 @@ var displayBeer = function(beer) {
   beerName.innerText = beer.name;
   beerItem.appendChild(beerName);
   beerList.appendChild(beerItem);
+  var ingredientsTitle = document.createElement("h4")
+  ingredientsTitle.innerText = "Ingredients:"
+  beerItem.appendChild(ingredientsTitle);
 
 //List unique hops
 
