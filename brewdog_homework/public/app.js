@@ -32,8 +32,12 @@ var displayBeer = function(beer) {
   var beerList = document.querySelector("#beer-list");
   var beerItem = document.createElement("li");
   beerItem.innerText = beer.name;
-
   beerList.appendChild(beerItem);
+
+  var beerImg = document.createElement("img");
+  beerImg.src = beer.image_url;
+  beerImg.classList = "beer-image";
+  beerList.appendChild(beerImg);
 }
 
 window.addEventListener('load', app);
