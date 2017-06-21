@@ -1,3 +1,5 @@
+
+
 var app = function(){
 
   var url = "https://api.punkapi.com/v2/beers";
@@ -36,13 +38,51 @@ var displayBeer = function(beer) {
   beerItem.appendChild(beerName);
   beerList.appendChild(beerItem);
 
+//List unique hops
+
+  var hops = document.createElement("p");
+  var hopsArray = beer.ingredients.hops;
+  var hopsNameArray = [];
+
+  for(hop of hopsArray) {
+    hopsNameArray.push(hop.name);
+  }
+  var uniqHops = hopsNameArray.filter(function (value, index, self) {
+      return self.indexOf(value) === index;
+  });
+
+  var hopsString = "Hops ";
+
+  for(hop of uniqHops) {
+    hopsString += " - " + hop;
+  }
+  hops.innerText = hopsString;
+  beerItem.appendChild(hops);
+
+//List malts
+
+var malts = document.createElement("p");
+var maltArray = beer.ingredients.malt;
+var maltString = "Malts ";
+
+for(malt of maltArray) {
+  maltString += " - " + malt.name;
+}
+
+malts.innerText = maltString;
+beerItem.appendChild(malts);
+
+
+//List yeast
 
   var yeast = document.createElement("p");
   var yeastString = beer.ingredients.yeast;
   var trimmedYeast = yeastString.slice(6);
-  yeast.innerText = "Yeast: " + trimmedYeast;
+  yeast.innerText = "Yeast - " + trimmedYeast;
 
   beerItem.appendChild(yeast);
+
+//Add image
 
   var beerImg = document.createElement("img");
   beerImg.src = beer.image_url;

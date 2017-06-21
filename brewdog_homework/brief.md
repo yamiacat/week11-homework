@@ -12,8 +12,8 @@
   - there is an `"image_url"` key on the beer objects we get back from the API -->
 
 ## Extensions
-- Add a list of ingredients for each beer
-  - There are 3 different types of `"ingredients"` on the beer object we get back - `"malt"`, `"hops"`, and `"yeast"`. You can choose which to display, or if you're feeling ambitious, try to combine all three into one array and display them all.
+<!-- - Add a list of ingredients for each beer
+  - There are 3 different types of `"ingredients"` on the beer object we get back - `"malt"`, `"hops"`, and `"yeast"`. You can choose which to display, or if you're feeling ambitious, try to combine all three into one array and display them all. -->
 - Refactor to only show details about one beer, and add a dropdown to select the beer to display
 
 We have provided a skeleton start point.
