@@ -31,13 +31,29 @@ var listAllBeerObjects = function(beers) {
 var displayBeer = function(beer) {
   var beerList = document.querySelector("#beer-list");
   var beerItem = document.createElement("li");
-  beerItem.innerText = beer.name;
+  var beerName = document.createElement("h2")
+  beerName.innerText = beer.name;
+  beerItem.appendChild(beerName);
   beerList.appendChild(beerItem);
+
+
+  var yeast = document.createElement("p");
+  var yeastString = beer.ingredients.yeast;
+  var trimmedYeast = yeastString.slice(6);
+  yeast.innerText = "Yeast: " + trimmedYeast;
+
+  beerItem.appendChild(yeast);
 
   var beerImg = document.createElement("img");
   beerImg.src = beer.image_url;
   beerImg.classList = "beer-image";
+  beerImg.alt = "Picture of " + beer.name;
   beerList.appendChild(beerImg);
 }
+
+
+
+
+
 
 window.addEventListener('load', app);
