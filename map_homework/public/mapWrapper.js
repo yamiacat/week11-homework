@@ -27,8 +27,8 @@ var MapWrapper = function(container, coords, zoom) {
       marker.addListener('click', function() {
         infowindow.open(this.googleMap, marker);
       });
-
-
-
+    },
+    motate: function(destination) {
+        this.googleMap.setCenter(destination);
     }
   }
