@@ -1,9 +1,10 @@
+//MY VERSION
 
 var initialize = function() {
 
-var container = document.querySelector("#main-map");
-var coords = {lat: 33.6773, lng: -106.4754}
-var zoom = 10
+  var container = document.querySelector("#main-map");
+  var coords = {lat: 33.6773, lng: -106.4754}
+  var zoom = 10
 
   mainMap = new MapWrapper(container, coords, zoom);
 
@@ -11,15 +12,15 @@ var zoom = 10
 
   var marker = mainMap.addInfoMarker(coords, infoContent1);
 
-var coords2 = {lat: 11.583333, lng: 165.383333}
+  var coords2 = {lat: 11.583333, lng: 165.383333}
 
   var infoContent2 = "<h1>Bikini Atoll</h1>" + "<p>Bikini Atoll is in the Marshall Islands, and consists of 23 islands surrounding a deep central lagoon. Between 1946 and 1958, 23 nuclear devices were detonated by the United States at seven test sites located on the reef, inside the atoll, in the air, or underwater.[16] They had a combined fission yield of 42.2 Mt.</p>" + "<p>Attribution: Bikini Atoll, <a href='https://en.wikipedia.org/wiki/Bikini_Atoll#Nuclear_test_site'>'https://en.wikipedia.org/wiki/Bikini_Atoll#Nuclear_test_site'</a>"
 
   var marker2 = mainMap.addInfoMarker(coords2, infoContent2);
 
 
-var niceButton = document.querySelector("#nice-button");
-niceButton.addEventListener("click", handleButtonClick);
+  var niceButton = document.querySelector("#nice-button");
+  niceButton.addEventListener("click", handleButtonClick);
 
 }
   var handleButtonClick = function() {
