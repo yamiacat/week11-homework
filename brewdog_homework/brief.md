@@ -5,7 +5,7 @@
 - Practice traversing the data structure received from an API
 
 ## Tasks
-- Make an XMLHttpRequest to get data on brewdog beers back from [this API: `https://api.punkapi.com/v2/beers`](https://api.punkapi.com/v2/beers)
+<!-- - Make an XMLHttpRequest to get data on brewdog beers back from [this API: `https://api.punkapi.com/v2/beers`](https://api.punkapi.com/v2/beers) -->
 - Display a list of the names of the beers
   - try to use small, reuseable functions, for example, one to handle looping through all the data, then using a separate function to create and render each item into the list.
 - Add an `<img>` to each beer
