@@ -3,6 +3,7 @@
   margin-bottom: 2em;
 }
 
-/*.beer-title {
-  font-size: 3em;
-}*/
+html {
+  background: url('beer.jpg') no-repeat center fixed;
+
+}
