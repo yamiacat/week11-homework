@@ -1,5 +1,7 @@
 var app = function() {
 
+getChart("US");
+
 }
 
 
