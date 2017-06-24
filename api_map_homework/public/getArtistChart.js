@@ -25,6 +25,7 @@ request.addEventListener("load", function() {
   var artistChart = renderArtistChart(musicData, country);
 
   map.addInfoMarker(country.coords, artistChart);
+  map.bounceMarkers();
 
 
   // return artistChart;

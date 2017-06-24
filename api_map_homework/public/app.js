@@ -8,10 +8,6 @@ var initialize = function() {
     getArtistChart(country, map);
   }
 
-  map.bounceMarkers();
-
-
-
 }
 
 
