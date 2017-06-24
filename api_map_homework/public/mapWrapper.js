@@ -24,9 +24,10 @@ var MapWrapper = function(container, coords, zoom) {
         maxWidth: 300
       });
       marker.addListener('click', function() {
-        infowindow.open(this.googleMap, marker);
-      });
-    },
+      infowindow.open(this.googleMap, marker);
+    })
+    return infowindow;
+  },
     // bounceMarkers: function(){
     //   this.markers.forEach(function(marker) {
     //     marker.setAnimation(google.maps.Animation.BOUNCE)

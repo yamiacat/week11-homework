@@ -13,5 +13,5 @@ var renderArtistChart = function(chartObject, country) {
     olBody.appendChild(artistListing);
   }
   chartPage.appendChild(olBody);
-  // return olBody;
+  return olBody;
 };

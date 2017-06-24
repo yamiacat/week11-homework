@@ -18,14 +18,11 @@ var initialize = function() {
   var map = createInfoMap(countries);
 
   for(country of countries) {
-    getArtistChart(country);
-    map.addInfoMarker(country.coords, country.countryName)
+
+    getArtistChart(country, map);
+
   }
 
-  // populateInfoBox(map);
-  // createInfoBox(map);
-
-  // getArtistChart("US");
 
 
 

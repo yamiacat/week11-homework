@@ -1,5 +1,5 @@
 
-var getArtistChart = function(country) {
+var getArtistChart = function(country, map) {
 
 
 var url = "https://api.musixmatch.com/ws/1.1/chart.artists.get?format=jsonp&callback=callback&country=" + country.country + "&apikey=";
@@ -24,7 +24,10 @@ request.addEventListener("load", function() {
 
   var artistChart = renderArtistChart(musicData, country);
 
-  return artistChart;
+  map.addInfoMarker(country.coords, artistChart);
+
+
+  // return artistChart;
 
 });
 
