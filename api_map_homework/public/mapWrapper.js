@@ -6,7 +6,7 @@ var MapWrapper = function(container, coords, zoom) {
     zoom: zoom
   });
   this.markers = []
-  // this.bounceMarkers = this.bounceMarkers.bind(this)
+  this.bounceMarkers = this.bounceMarkers.bind(this)
   this.addInfoMarker = this.addInfoMarker.bind(this)
   }
 
@@ -28,9 +28,9 @@ var MapWrapper = function(container, coords, zoom) {
     })
     return infowindow;
   },
-    // bounceMarkers: function(){
-    //   this.markers.forEach(function(marker) {
-    //     marker.setAnimation(google.maps.Animation.BOUNCE)
-    //   })
-    // }
+    bounceMarkers: function(){
+      this.markers.forEach(function(marker) {
+        marker.setAnimation(google.maps.Animation.BOUNCE)
+      })
+    }
   }

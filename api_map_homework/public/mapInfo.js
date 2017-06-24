@@ -1,9 +1,9 @@
 
-var createInfoMap = function(countries) {
+var createInfoMap = function() {
 
   var container = document.querySelector("#main-map");
-  var coords = {lat: 0, lng: 0}
-  var zoom = 1
+  var coords = {lat: 30, lng: 20}
+  var zoom = 2
 
   var mainMap = new MapWrapper(container, coords, zoom);
 
