@@ -1,6 +1,11 @@
 var app = function() {
 
-getChart("US");
+
+
+
+
+getArtistChart("US");
+
 
 }
 
