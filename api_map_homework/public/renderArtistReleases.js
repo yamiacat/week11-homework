@@ -44,8 +44,19 @@ var renderArtistReleases = function(releaseData) {
     releaseSection.appendChild(releaseSectionTitle);
 
     for(release of dataArray) {
+      var fullDate = release.album.album_release_date;
+      var trimmedDate = fullDate.slice(0, 4);
       var releaseListItem = document.createElement("li");
-      releaseListItem.innerText = release.album.album_name + " (" + release.album.album_release_date + ")";
+      releaseListItem.id = release.album.album_id;
+      releaseListItem.innerText = release.album.album_name + " (" + trimmedDate + ")";
+      var trackButton = document.createElement("button");
+      trackButton.innerText = "y tho";
+      trackButton.value = release.album.album_id;
+      trackButton.addEventListener("click", function() {
+        getAlbumTracks(this.value);
+      });
+      releaseListItem.appendChild(trackButton);
+
       releaseSection.appendChild(releaseListItem);
     }
 
