@@ -23,7 +23,7 @@ request.addEventListener("load", function() {
 //CREATE JSON OBJECTS
   var albumData = JSON.parse(jsonStringTrimmed);
 
-console.log(albumData);
+  renderArtistReleases(albumData);
 
 
 });
